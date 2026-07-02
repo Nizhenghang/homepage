@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>倪正航 · Personal Homepage</title>
+    <meta name="description" content="倪正航的个人主页 — 学生 · 探索者 · 创造者" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="container nav-inner">
+        <a href="#top" class="logo"><span class="dot"></span>倪正航</a>
+        <div class="nav-links">
+          <a href="#about">关于</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#interests">探索</a>
+          <a href="#contact">联系</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <canvas id="cosmos"></canvas>
+      <div class="container hero-content">
+        <span class="badge"><span class="pulse"></span>当前正在探索 AI 与嵌入式</span>
+        <h1>你好，我是<br /><span class="accent">倪正航</span></h1>
+        <p class="tagline">
+          一个 <strong>学生 · 探索者 · 创造者</strong>。正在用代码和好奇心丈量世界，把每一个想法变成可以触摸的东西。
+        </p>
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">查看作品 →</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+      </div>
+      <div class="container hero-meta">
+        <div>基于中国 · 远程协作可</div>
+        <div class="scroll-hint"><span>向下滚动</span><span class="line"></span></div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">01 /</span>
+          <div>
+            <h2 class="section-title">关于我</h2>
+            <p class="section-sub">一些关于我是谁、在做什么、想去哪里的说明。</p>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="avatar-block reveal">
+            <div class="avatar">
+              <span class="initials">NZH</span>
+              <div class="avatar-tag">
+                <span>倪正航 / Nizhenghang</span>
+                <span class="live"><span class="dot"></span>Open to collab</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p>我是 <strong>倪正航</strong>，一名在校学生，也是一名持续探索中的创造者。我相信<strong>学习最好的方式是动手做</strong>，所以这个主页本身就是一次实验。</p>
+            <p>我对 <strong>人工智能，电子信息</strong> 都抱有浓厚兴趣，喜欢把抽象的概念变成具体可用的工具。课余时间，我会写代码、做小项目，偶尔记录一些思考。</p>
+            <p>目前我正在系统性地打磨自己的工程能力，同时保持对未知领域的好奇心。如果你也对创造感兴趣，欢迎一起聊聊。</p>
+            <div class="about-stats">
+              <div class="stat"><div class="num">10+</div><div class="label">动手小项目</div></div>
+              <div class="stat"><div class="num">3+</div><div class="label">关注方向</div></div>
+              <div class="stat"><div class="num">∞</div><div class="label">好奇心</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">02 /</span>
+          <div>
+            <h2 class="section-title">技能与工具</h2>
+            <p class="section-sub">我在学习和实践中接触过的技术栈与工具，仍在持续扩展。</p>
+          </div>
+        </div>
+        <div class="skills-wrap reveal">
+          <span class="skill">MCU</span>
+          <span class="skill">C / C++</span>
+          <span class="skill">Python</span>
+          <span class="skill">HTML / CSS</span>
+          <span class="skill">FPGA</span>
+          <span class="skill">嵌入式Linux</span>
+          <span class="skill">PyTorch</span>
+          <span class="skill">VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">03 /</span>
+          <div>
+            <h2 class="section-title">精选项目</h2>
+            <p class="section-sub">一些动手做过的实践，覆盖嵌入式AI，FPGA与个人工具。</p>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <article class="project reveal">
+            <div class="p-meta">
+              <span class="p-tag">嵌入式 AI</span>
+              <span class="p-status">Realtime</span>
+            </div>
+            <h3>疲劳驾驶检测</h3>
+            <p>基于瑞萨 RA8D1，部署轻量化 CNN 卷积神经网络，实现对驾驶员疲劳状态的实时检测。</p>
+            <div class="p-stack"><span>C</span><span>CNN</span><span>MCU</span></div>
+            <a href="https://github.com/Nizhenghang/Fatigue_Detect" class="p-link">查看详情 →</a>
+          </article>
+
+          <article class="project reveal">
+            <div class="p-meta">
+              <span class="p-tag">FPGA</span>
+              <span class="p-status">Prototype</span>
+            </div>
+            <h3>基于openFPGA的自定义FPGA</h3>
+            <p>物理 FPGA 承载软 FPGA Fabric，软 FPGA 再承载用户流水灯逻辑，形成两级映射的分层架构。</p>
+            <div class="p-stack"><span>FPGA</span><span>Verilog</span><span>openFPGA</span></div>
+            <a href="https://github.com/Nizhenghang/openfpga-anlogic-hx4s20-led" class="p-link">查看详情 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">04 /</span>
+          <div>
+            <h2 class="section-title">正在探索</h2>
+            <p class="section-sub">未来无限，无畏向前</p>
+          </div>
+        </div>
+        <div class="interests-grid">
+          <article class="interest reveal">
+            <div class="i-icon">🤖</div>
+            <h4>人工智能</h4>
+            <p>从大模型到智能体，关注 AI 如何真正落地到具体场景、解决真实问题。</p>
+          </article>
+          <article class="interest reveal">
+            <div class="i-icon">📚</div>
+            <h4>嵌入式Linux</h4>
+            <p>复杂网络通信、丰富外设支持、多任务并发、图形界面或云端连接</p>
+          </article>
+          <article class="interest reveal">
+            <div class="i-icon">⚙️</div>
+            <h4>工程实践</h4>
+            <p>从一行代码到完整项目，享受把想法变成可用工具的全过程。</p>
+          </article>
+          <article class="interest reveal">
+            <div class="i-icon">🧭</div>
+            <h4>产品思维</h4>
+            <p>不止“做出来”，更想理解“为什么做”和“为谁做”。</p>
+          </article>
+          <article class="interest reveal">
+            <div class="i-icon">🌍</div>
+            <h4>开放世界</h4>
+            <p>开源、知识共享、远程协作。相信开放让创造更自由。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="reveal">
+          <h2>一起<span class="accent">创造</span>点什么</h2>
+          <p>无论是项目合作、想法交流，还是单纯打个招呼，都欢迎联系我。</p>
+          <div class="contact-links">
+            <a href="mailto:nizheng@example.com" class="contact-card">
+              <span class="c-label">Email</span>
+              <span class="c-val">24009180032@stu.xidian.edu.cn</span>
+            </a>
+            <a href="#" class="contact-card">
+              <span class="c-label">GitHub</span>
+              <span class="c-val">@Nizhenghang</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© 2026 倪正航 · 用代码与好奇心丈量世界</div>
+        <div><a href="#top">回到顶部 ↑</a></div>
+      </div>
+    </footer>
+
+    <script src="./cosmos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
