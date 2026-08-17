@@ -26,7 +26,7 @@
     <header class="hero" id="top">
       <canvas id="cosmos"></canvas>
       <div class="container hero-content">
-        <span class="badge"><span class="pulse"></span>当前正在探索 AI 与嵌入式</span>
+        <span class="badge"><span class="pulse"></span>正在构建 EdgeBlackBox · RK3568 边缘 AI</span>
         <h1>你好，我是<br /><span class="accent">倪正航</span></h1>
         <p class="tagline">
         用代码和好奇心丈量世界，把每一个想法变成可以触摸的东西。
@@ -64,6 +64,7 @@
           <div class="about-text reveal">
             <p>我是 <strong>倪正航</strong>，一名在校学生，也是一名持续探索中的创造者。我相信<strong>学习最好的方式是动手做</strong>，所以这个主页本身就是一次实验。</p>
             <p>我对 <strong>人工智能，电子信息</strong> 都抱有浓厚兴趣，喜欢把抽象的概念变成具体可用的工具。课余时间，我会写代码、做小项目，偶尔记录一些思考。</p>
+            <p>最近的主场是一块 <strong>RK3568 边缘板</strong>——我在上面做一个隐私保护的「边缘黑匣子」<strong>EdgeBlackBox</strong>：把多模态传感信号在设备端采集、触发与检索，数据不出板。</p>
             <p>目前我正在系统性地打磨自己的工程能力，同时保持对未知领域的好奇心。如果你也对创造感兴趣，欢迎一起聊聊。</p>
             <div class="about-stats">
               <div class="stat"><div class="num">10+</div><div class="label">动手小项目</div></div>
@@ -85,13 +86,16 @@
           </div>
         </div>
         <div class="skills-wrap reveal">
-          <span class="skill">MCU</span>
+          <span class="skill cat-core">RK3568</span>
+          <span class="skill cat-core">边缘 AI</span>
           <span class="skill">C / C++</span>
           <span class="skill">Python</span>
-          <span class="skill">HTML / CSS</span>
+          <span class="skill cat-core">嵌入式 Linux</span>
+          <span class="skill">MCU</span>
           <span class="skill">FPGA</span>
-          <span class="skill">嵌入式Linux</span>
+          <span class="skill">CAN FD</span>
           <span class="skill">PyTorch</span>
+          <span class="skill">HTML / CSS</span>
           <span class="skill">VS Code</span>
         </div>
       </div>
@@ -107,6 +111,17 @@
           </div>
         </div>
         <div class="projects-grid">
+          <article class="project reveal flagship">
+            <div class="p-meta">
+              <span class="p-tag">★ 旗舰项目 · 边缘 AI</span>
+              <span class="p-status">进行中</span>
+            </div>
+            <h3>EdgeBlackBox · 边缘黑匣子</h3>
+            <p>基于 <b>RK3568</b> 的<b>隐私保护型多模态边缘事件检索黑匣子</b>。核心黑匣子循环：板载信号 / CAN FD 振动 → 环形缓冲 → 低成本事件触发 → JSONL 事件索引 → 本地检索回看，数据全程不出板。</p>
+            <div class="p-stack"><span>RK3568</span><span>C</span><span>嵌入式 Linux</span><span>边缘 AI</span><span>CAN FD</span></div>
+            <a href="https://github.com/Nizhenghang/EdgeSentinel-RK3568" class="p-link">查看仓库 →</a>
+          </article>
+
           <article class="project reveal">
             <div class="p-meta">
               <span class="p-tag">嵌入式 AI</span>
@@ -149,8 +164,8 @@
           </article>
           <article class="interest reveal">
             <div class="i-icon">📚</div>
-            <h4>嵌入式Linux</h4>
-            <p>复杂网络通信、丰富外设支持、多任务并发、图形界面或云端连接</p>
+            <h4>嵌入式 Linux</h4>
+            <p>在 RK3568 上做交叉编译、驱动移植与多任务并发；复杂网络、丰富外设与本地服务。</p>
           </article>
           <article class="interest reveal">
             <div class="i-icon">⚙️</div>
@@ -166,6 +181,11 @@
             <div class="i-icon">🌍</div>
             <h4>开放世界</h4>
             <p>开源、知识共享、远程协作。相信开放让创造更自由。</p>
+          </article>
+          <article class="interest reveal">
+            <div class="i-icon">🛰️</div>
+            <h4>边缘智能</h4>
+            <p>隐私优先的多模态感知与本地检索，让模型与数据留在设备端，而非云上。</p>
           </article>
         </div>
       </div>
