@@ -636,6 +636,35 @@ section > .container { position: relative; z-index: 1; }
 
 .p-link:hover { gap: 10px; color: var(--accent-2); }
 
+/* 旗舰项目卡：占满整行、强调光效 */
+.project.flagship {
+  grid-column: 1 / -1;
+  min-height: 240px;
+  border-color: var(--border-strong);
+  background:
+    linear-gradient(135deg, rgba(22, 26, 54, 0.96), rgba(10, 11, 26, 0.90)),
+    radial-gradient(circle at 10% 25%, rgba(126,184,255,0.18), transparent 42%);
+}
+
+.project.flagship::before { transform: scaleX(1); }
+
+.project.flagship .p-tag { color: var(--accent-2); }
+.project.flagship .p-tag::before {
+  background: var(--accent-2);
+  box-shadow: 0 0 14px var(--accent-glow2);
+}
+
+.project.flagship h3 {
+  font-size: clamp(26px, 3.4vw, 34px);
+  max-width: 100%;
+}
+
+.project.flagship .p-status {
+  color: var(--accent-warm);
+  border-color: rgba(255, 213, 128, 0.28);
+  background: rgba(255, 213, 128, 0.08);
+}
+
 /* ── Interests ───────────────────────────────────────────── */
 .interests-grid {
   display: grid;
