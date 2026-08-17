@@ -121,6 +121,33 @@ nav.scrolled {
 }
 .nav-links a:hover::after { width: 100%; }
 
+/* 移动端菜单按钮（桌面端隐藏） */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(15, 15, 30, 0.6);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px; height: 2px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ── Hero 区 ─────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -801,7 +828,28 @@ footer a:hover { color: var(--accent); }
 
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 64px; right: 0; left: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 6px 20px 14px;
+    background: rgba(6, 6, 14, 0.96);
+    backdrop-filter: blur(18px) saturate(1.4);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+  }
+  .nav-links a {
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--border);
+    font-size: 15px;
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  nav.nav-open .nav-links { transform: translateY(0); opacity: 1; pointer-events: auto; }
 
   .hero-meta {
     position: relative;
