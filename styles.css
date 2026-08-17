@@ -18,12 +18,12 @@
   --text-dim: #8892b0;       /* 星云灰蓝 */
   --text-mute:#4a5270;
 
-  /* 强调色：星光青蓝 */
+  /* 强调色：星光青蓝（收敛后的双色体系：冰蓝 + 星云紫） */
   --accent:      #7eb8ff;           /* 主高亮：冰蓝 */
   --accent-2:    #b48fff;           /* 辅高亮：星云紫 */
-  --accent-warm: #ffd580;           /* 暖色点缀：类太阳金 */
-  --accent-glow: rgba(126, 184, 255, 0.30);
-  --accent-glow2:rgba(180, 143, 255, 0.25);
+  --accent-warm: #ffd580;           /* 暖色点缀（仅极小范围备用，不参与主视觉） */
+  --accent-glow: rgba(126, 184, 255, 0.18);
+  --accent-glow2:rgba(180, 143, 255, 0.14);
 
   /* 渐变快捷 */
   --grad-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
@@ -247,13 +247,13 @@ nav.scrolled {
 
 .btn-primary {
   background: var(--grad-accent);
-  box-shadow: 0 8px 30px var(--accent-glow), 0 2px 60px var(--accent-glow2);
+  box-shadow: 0 6px 22px rgba(126,184,255,0.16);
   color: #06060e;
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 14px 44px var(--accent-glow), 0 4px 80px var(--accent-glow2);
+  box-shadow: 0 10px 32px rgba(126,184,255,0.22);
   transform: translateY(-2px);
 }
 
@@ -307,34 +307,17 @@ section::before {
 
 section > .container { position: relative; z-index: 1; }
 
-/* About: 左上角蓝紫光晕 */
-#about::before {
-  background:
-    radial-gradient(ellipse 60% 50% at 10% 20%, rgba(126,184,255,0.055) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 90% 80%, rgba(180,143,255,0.04) 0%, transparent 70%);
-}
+/* 区块背景统一为干净深空，仅项目区保留一处极淡光晕作为视觉锚点 */
+#about::before,
+#skills::before,
+#interests::before { background: none; }
 
-/* Skills: 正中蓝晕 */
-#skills {
-  background: rgba(12,12,24,0.7);
-}
-#skills::before {
-  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(126,184,255,0.05) 0%, transparent 80%);
-}
+#skills,
+#interests { background: transparent; }
 
-/* Projects: 右上角紫晕 */
+/* Projects: 极淡紫晕，克制不抢内容 */
 #projects::before {
-  background:
-    radial-gradient(ellipse 55% 45% at 85% 10%, rgba(180,143,255,0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 90%, rgba(126,184,255,0.04) 0%, transparent 70%);
-}
-
-/* Interests: 底部蓝紫渐变 */
-#interests {
-  background: rgba(10,10,20,0.5);
-}
-#interests::before {
-  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(126,184,255,0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 50% 40% at 82% 8%, rgba(180,143,255,0.045) 0%, transparent 72%);
 }
 
 .section-head {
@@ -385,22 +368,22 @@ section > .container { position: relative; z-index: 1; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: linear-gradient(135deg, #0d0d22 0%, #0a0a18 100%);
-  box-shadow: 0 0 60px rgba(126,184,255,0.06) inset;
+  box-shadow: 0 0 40px rgba(126,184,255,0.04) inset;
 }
 
 .avatar::before {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(126, 184, 255, 0.12), transparent 60%);
+  background: radial-gradient(circle at 30% 30%, rgba(126, 184, 255, 0.10), transparent 60%);
   content: "";
 }
 
-/* 外圈光环动画 */
+/* 外圈极淡光环 */
 .avatar::after {
   position: absolute;
   inset: -1px;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(126,184,255,0.3), rgba(180,143,255,0.2), transparent 60%);
+  background: linear-gradient(135deg, rgba(126,184,255,0.16), rgba(180,143,255,0.10), transparent 60%);
   content: "";
   z-index: -1;
 }
@@ -415,7 +398,7 @@ section > .container { position: relative; z-index: 1; }
   font-size: clamp(80px, 14vw, 140px);
   font-weight: 700;
   -webkit-background-clip: text;
-  filter: drop-shadow(0 0 30px rgba(126,184,255,0.4));
+  filter: drop-shadow(0 0 18px rgba(126,184,255,0.28));
 }
 
 .avatar-tag {
@@ -552,28 +535,28 @@ section > .container { position: relative; z-index: 1; }
   transition: transform 0.4s var(--ease);
 }
 
-/* 角落辉光 */
+/* 角落辉光（极淡） */
 .project::after {
   content: "";
   position: absolute;
   top: -40px; right: -40px;
-  width: 160px; height: 160px;
+  width: 150px; height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(126,184,255,0.16) 0%, transparent 68%);
+  background: radial-gradient(circle, rgba(126,184,255,0.10) 0%, transparent 68%);
   pointer-events: none;
   transition: opacity 0.4s;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .project:hover {
   border-color: var(--border-strong);
   background: rgba(16, 16, 38, 0.92);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(126,184,255,0.07), 0 0 0 1px var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(126,184,255,0.05);
 }
 
 .project:hover::before { transform: scaleX(1); }
-.project:hover::after  { opacity: 1; }
+.project:hover::after  { opacity: 0.7; }
 
 .project > * {
   position: relative;
@@ -687,9 +670,9 @@ section > .container { position: relative; z-index: 1; }
 }
 
 .project.flagship .p-status {
-  color: var(--accent-warm);
-  border-color: rgba(255, 213, 128, 0.28);
-  background: rgba(255, 213, 128, 0.08);
+  color: var(--accent-2);
+  border-color: rgba(180, 143, 255, 0.30);
+  background: rgba(180, 143, 255, 0.08);
 }
 
 /* ── Interests ───────────────────────────────────────────── */
@@ -729,9 +712,7 @@ section > .container { position: relative; z-index: 1; }
 .contact {
   padding: 120px 0;
   text-align: center;
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 0%,   rgba(126,184,255,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 50% 100%,  rgba(180,143,255,0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(126,184,255,0.05) 0%, transparent 72%);
 }
 
 .contact h2 { margin-bottom: 20px; font-size: clamp(36px, 6vw, 64px); }
