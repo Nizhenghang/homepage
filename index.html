@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>倪正航 · Personal Homepage</title>
-    <meta name="description" content="倪正航的个人主页 — 学生 · 探索者 · 创造者" />
+    <meta name="description" content="倪正航的个人主页 — 嵌入式 Linux / 边缘 AI 方向的在校学生，正在构建 RK3568 边缘黑匣子 EdgeBlackBox。" />
+    <meta name="theme-color" content="#06060e" />
+    <meta property="og:title" content="倪正航 · Personal Homepage" />
+    <meta property="og:description" content="嵌入式 Linux / 边缘 AI 方向的在校学生，正在构建 RK3568 边缘黑匣子 EdgeBlackBox。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nizhenghang.github.io/homepage/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306060e'/%3E%3Ctext x='16' y='23' font-size='19' font-family='Arial' font-weight='700' text-anchor='middle' fill='%237eb8ff'%3EN%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <nav id="nav">
+    <nav id="nav" aria-label="主导航">
       <div class="container nav-inner">
         <a href="#top" class="logo"><span class="dot"></span>倪正航</a>
+        <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <div class="nav-links">
           <a href="#about">关于</a>
           <a href="#skills">技能</a>
@@ -37,7 +46,7 @@
         </div>
       </div>
       <div class="container hero-meta">
-        <div>基于中国 · 远程协作可</div>
+        <div>📍 中国 · 可接受远程协作</div>
         <div class="scroll-hint"><span>向下滚动</span><span class="line"></span></div>
       </div>
     </header>
@@ -130,7 +139,7 @@
             <h3>疲劳驾驶检测</h3>
             <p>基于瑞萨 RA8D1，部署轻量化 CNN 卷积神经网络，实现对驾驶员疲劳状态的实时检测。</p>
             <div class="p-stack"><span>C</span><span>CNN</span><span>MCU</span></div>
-            <a href="https://github.com/Nizhenghang/Fatigue_Detect" class="p-link">查看详情 →</a>
+            <a href="https://github.com/Nizhenghang/QianSai_Fatigue" class="p-link">查看仓库 →</a>
           </article>
 
           <article class="project reveal">
@@ -141,7 +150,18 @@
             <h3>基于openFPGA的自定义FPGA</h3>
             <p>物理 FPGA 承载软 FPGA Fabric，软 FPGA 再承载用户流水灯逻辑，形成两级映射的分层架构。</p>
             <div class="p-stack"><span>FPGA</span><span>Verilog</span><span>openFPGA</span></div>
-            <a href="https://github.com/Nizhenghang/openfpga-anlogic-hx4s20-led" class="p-link">查看详情 →</a>
+            <a href="https://github.com/Nizhenghang/openfpga-anlogic-hx4s20-led" class="p-link">查看仓库 →</a>
+          </article>
+
+          <article class="project reveal">
+            <div class="p-meta">
+              <span class="p-tag">FPGA · 边缘推理</span>
+              <span class="p-status">Verified</span>
+            </div>
+            <h3>FPGA 手写数字识别加速器</h3>
+            <p>在安路 EG4S20 / HX4S20 上实现 <b>INT4 量化</b> MLP 推理核心（48×48 → 32 → 10），MNIST 实测约 94.87%；RTL 与黄金模型一致，板级 200/200 帧验证通过。</p>
+            <div class="p-stack"><span>FPGA</span><span>Verilog</span><span>INT4</span><span>MNIST</span></div>
+            <a href="https://github.com/Nizhenghang/FPGA-Digit-Recognition" class="p-link">查看仓库 →</a>
           </article>
         </div>
       </div>
@@ -197,11 +217,11 @@
           <h2>一起<span class="accent">创造</span>点什么</h2>
           <p>无论是项目合作、想法交流，还是单纯打个招呼，都欢迎联系我。</p>
           <div class="contact-links">
-            <a href="mailto:nizheng@example.com" class="contact-card">
+            <a href="mailto:24009180032@stu.xidian.edu.cn" class="contact-card">
               <span class="c-label">Email</span>
               <span class="c-val">24009180032@stu.xidian.edu.cn</span>
             </a>
-            <a href="#" class="contact-card">
+            <a href="https://github.com/Nizhenghang" target="_blank" rel="noopener" class="contact-card">
               <span class="c-label">GitHub</span>
               <span class="c-val">@Nizhenghang</span>
             </a>
