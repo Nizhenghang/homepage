@@ -27,3 +27,7 @@ docs/superpowers/
 # 临时文件
 *.tmp
 *.bak
+
+# 本地原始照片与工具（不部署、不进仓库）
+/*.jpg
+.tools/
