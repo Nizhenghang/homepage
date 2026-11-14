@@ -1,6 +1,6 @@
 # 倪正航个人主页
 
-倪正航（Zhenghang NI）的个人主页与简历，纯静态站点，版式参照 AcademicPages / [WowPage](https://wd7ang.github.io/)。
+倪正航（Zhenghang Ni）的个人主页与简历，纯静态站点，版式参照 AcademicPages / [WowPage](https://wd7ang.github.io/)。
 线上地址：https://nizhenghang.github.io/homepage/
 
 ## 文件结构

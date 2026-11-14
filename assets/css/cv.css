@@ -72,7 +72,13 @@
 .cv-contact li { display: flex; align-items: center; gap: 7px; }
 .cv-contact svg { width: 14px; height: 14px; flex: 0 0 14px; }
 .cv-contact a { color: var(--c-link); }
-.cv-motto { margin: 14px 0 0; font-size: 0.92rem; color: var(--c-text); }
+.cv-motto {
+  margin: 14px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--c-link);
+}
 
 .cv-section h2 {
   margin: 28px 0 12px;
@@ -118,6 +124,7 @@
   @page { size: A4; margin: 10mm; }
   .masthead, .footer, .cv-actions { display: none !important; }
   html, body { background: #fff; }
+  html { font-size: 15px; }
   body { font-size: 11px; }
   .cv-sheet {
     max-width: none;
@@ -129,7 +136,8 @@
   }
   .cv-name { font-size: 1.5rem; }
   .cv-header { padding-right: 100px; min-height: 0; padding-bottom: 8px; }
-  .cv-photo { width: 84px; }
+  .cv-head { flex-direction: row; }
+  .cv-photo { position: absolute; top: 0; right: 0; width: 84px; margin-bottom: 0; }
   .cv-motto { margin: 8px 0 0; }
   .cv-section h2 { color: var(--c-link-deep); margin: 8px 0 4px; }
   .cv-entry { margin-bottom: 5px; break-inside: avoid; }
