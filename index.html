@@ -1,243 +1,236 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>倪正航 · Personal Homepage</title>
-    <meta name="description" content="倪正航的个人主页 — 嵌入式 Linux / 边缘 AI 方向的在校学生，正在构建 RK3568 边缘黑匣子 EdgeBlackBox。" />
-    <meta name="theme-color" content="#06060e" />
-    <meta property="og:title" content="倪正航 · Personal Homepage" />
-    <meta property="og:description" content="嵌入式 Linux / 边缘 AI 方向的在校学生，正在构建 RK3568 边缘黑匣子 EdgeBlackBox。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nizhenghang.github.io/homepage/" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306060e'/%3E%3Ctext x='16' y='23' font-size='19' font-family='Arial' font-weight='700' text-anchor='middle' fill='%237eb8ff'%3EN%3C/text%3E%3C/svg%3E" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <nav id="nav" aria-label="主导航">
-      <div class="container nav-inner">
-        <a href="#top" class="logo"><span class="dot"></span>倪正航</a>
-        <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false">
-          <span></span><span></span><span></span>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>倪正航 Zhenghang NI / Homepage</title>
+  <meta name="description" content="倪正航（Zhenghang NI）的个人主页：边缘 AI、FPGA 加速与嵌入式 Linux 的项目实践与探索。">
+  <link rel="canonical" href="https://nizhenghang.github.io/homepage/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="倪正航 Zhenghang NI / Homepage">
+  <meta property="og:description" content="边缘 AI、FPGA 加速与嵌入式 Linux 的项目实践与探索。">
+  <meta property="og:url" content="https://nizhenghang.github.io/homepage/">
+  <meta property="og:image" content="https://nizhenghang.github.io/homepage/images/avatar.jpg">
+  <link rel="icon" type="image/svg+xml" href="images/avatar.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zhenghang NI",
+    "alternateName": "倪正航",
+    "url": "https://nizhenghang.github.io/homepage/",
+    "email": "mailto:24009180032@stu.xidian.edu.cn",
+    "sameAs": ["https://github.com/Nizhenghang"],
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Xidian University" }
+  }
+  </script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="masthead__title" href="#top">Zhenghang NI / Homepage</a>
+      <nav class="greedy-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span class="navicon"></span>
         </button>
-        <div class="nav-links">
-          <a href="#about">关于</a>
-          <a href="#skills">技能</a>
-          <a href="#projects">项目</a>
-          <a href="#interests">探索</a>
-          <a href="#contact">联系</a>
-        </div>
-      </div>
-    </nav>
+        <ul id="site-nav" class="nav-links">
+          <li><a href="#news">News</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#publications">Pub</a></li>
+          <li><a href="#projects">Project</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="cv/">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero" id="top">
-      <canvas id="cosmos"></canvas>
-      <div class="container hero-content">
-        <span class="badge"><span class="pulse"></span>正在构建 EdgeBlackBox · RK3568 边缘 AI</span>
-        <h1>你好，我是<br /><span class="accent">倪正航</span></h1>
-        <p class="tagline">
-        用代码和好奇心丈量世界，把每一个想法变成可以触摸的东西。
-        </p>
-        <div class="cta-row">
-          <a href="#projects" class="btn btn-primary">查看作品 →</a>
-          <a href="#contact" class="btn btn-ghost">联系我</a>
+  <div id="top" class="layout">
+    <aside class="sidebar">
+      <div class="author-card">
+        <img class="author__avatar" src="images/avatar.jpg" alt="倪正航 Zhenghang NI 的照片" width="175" height="175">
+        <h3 class="author__name">Zhenghang NI 倪正航</h3>
+        <p class="author__bio">用代码和好奇心丈量世界，把每一个想法变成可以触摸的东西。</p>
+        <div class="author__urls-wrapper">
+          <button class="follow-btn" aria-expanded="false">
+            Follow
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="author__urls">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>China · 中国</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              <a href="mailto:24009180032@stu.xidian.edu.cn">Email</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <a href="https://github.com/Nizhenghang" rel="noopener">GitHub</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="container hero-meta">
-        <div>📍 中国 · 可接受远程协作</div>
-        <div class="scroll-hint"><span>向下滚动</span><span class="line"></span></div>
-      </div>
-    </header>
+    </aside>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-num">01 /</span>
-          <div>
-            <h2 class="section-title">关于我</h2>
-            <p class="section-sub">一些关于我是谁、在做什么、想去哪里的说明。</p>
-          </div>
+    <article class="page">
+      <h1 class="main-heading">Hi there <span class="wave" aria-hidden="true">👋</span> Welcome to my Homepage!</h1>
+
+      <section id="about" aria-label="About">
+        <p>你好，我是<strong>倪正航</strong>，一名在校学生，也是一名持续探索中的创造者。我相信<strong>学习最好的方式是动手做</strong>，所以这个主页本身就是一次实验。</p>
+        <p>我对<strong>人工智能与电子信息</strong>都抱有浓厚兴趣，喜欢把抽象的概念变成具体可用的工具。最近的主场是一块 <strong>RK3568 边缘板</strong>——我在上面做一个隐私保护的「边缘黑匣子」<strong>EdgeBlackBox</strong>：把多模态传感信号在设备端采集、触发与检索，数据不出板。</p>
+        <p>目前我正在系统性地打磨自己的工程能力，同时保持对未知领域的好奇心。如果你也对创造感兴趣，欢迎一起聊聊，或来信讨论项目合作与各种机会。</p>
+        <div class="interests">
+          <p class="interests__label">Research Interests</p>
+          <ul class="chips">
+            <li>Edge AI</li>
+            <li>Embedded AI</li>
+            <li>FPGA</li>
+            <li>Embedded Linux</li>
+            <li>Multimodal Sensing</li>
+            <li>Privacy</li>
+          </ul>
         </div>
-        <div class="about-grid">
-          <div class="avatar-block reveal">
-            <div class="avatar">
-              <span class="initials">NZH</span>
-              <div class="avatar-tag">
-                <span>倪正航 / Nizhenghang</span>
-                <span class="live"><span class="dot"></span>Open to collab</span>
-              </div>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <div class="news-box">
+          <ul class="news-list">
+            <li class="empty">To be updated.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li>
+            <span class="xp-date">Present</span>
+            <div class="xp-head">
+              <img class="xp-logo" src="images/xdu.png" alt="Xidian University 校徽" width="44" height="44">
+              <h3><a href="https://www.xidian.edu.cn/" rel="noopener">Xidian University</a></h3>
             </div>
-          </div>
-          <div class="about-text reveal">
-            <p>我是 <strong>倪正航</strong>，一名在校学生，也是一名持续探索中的创造者。我相信<strong>学习最好的方式是动手做</strong>，所以这个主页本身就是一次实验。</p>
-            <p>我对 <strong>人工智能，电子信息</strong> 都抱有浓厚兴趣，喜欢把抽象的概念变成具体可用的工具。课余时间，我会写代码、做小项目，偶尔记录一些思考。</p>
-            <p>最近的主场是一块 <strong>RK3568 边缘板</strong>——我在上面做一个隐私保护的「边缘黑匣子」<strong>EdgeBlackBox</strong>：把多模态传感信号在设备端采集、触发与检索，数据不出板。</p>
-            <p>目前我正在系统性地打磨自己的工程能力，同时保持对未知领域的好奇心。如果你也对创造感兴趣，欢迎一起聊聊。</p>
-            <div class="about-stats">
-              <div class="stat"><div class="num">10+</div><div class="label">动手小项目</div></div>
-              <div class="stat"><div class="num">3+</div><div class="label">关注方向</div></div>
-              <div class="stat"><div class="num">∞</div><div class="label">好奇心</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <p class="xp-role">Undergraduate Student · 本科在读</p>
+            <p class="xp-detail">B.E. in progress · 学院与起止时间待补充</p>
+          </li>
+        </ol>
+      </section>
 
-    <section id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-num">02 /</span>
-          <div>
-            <h2 class="section-title">技能与工具</h2>
-            <p class="section-sub">我在学习和实践中接触过的技术栈与工具，仍在持续扩展。</p>
-          </div>
+      <section id="publications">
+        <h2>Publications</h2>
+        <div class="pub-button-container" role="group" aria-label="Publication views">
+          <button class="pub-button active" data-view="core-publications" aria-pressed="true">Core Publications</button>
+          <button class="pub-button" data-view="full-publications" aria-pressed="false">Full Publications List</button>
         </div>
-        <div class="skills-wrap reveal">
-          <span class="skill cat-core">RK3568</span>
-          <span class="skill cat-core">边缘 AI</span>
-          <span class="skill">C / C++</span>
-          <span class="skill">Python</span>
-          <span class="skill cat-core">嵌入式 Linux</span>
-          <span class="skill">MCU</span>
-          <span class="skill">FPGA</span>
-          <span class="skill">CAN FD</span>
-          <span class="skill">PyTorch</span>
-          <span class="skill">HTML / CSS</span>
-          <span class="skill">VS Code</span>
+        <div id="core-publications" class="publication-view">
+          <p class="empty">To be updated.</p>
         </div>
-      </div>
-    </section>
+        <div id="full-publications" class="publication-view" hidden>
+          <p class="empty">To be updated.</p>
+        </div>
+      </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-num">03 /</span>
-          <div>
-            <h2 class="section-title">精选项目</h2>
-            <p class="section-sub">一些动手做过的实践，覆盖嵌入式AI，FPGA与个人工具。</p>
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card featured">
+          <div class="card__media">
+            <img src="images/projects/edgeblackbox.jpg" alt="EdgeBlackBox：隐私保护型边缘事件检索黑匣子示意" loading="lazy" width="900" height="546">
+          </div>
+          <div class="card__body">
+            <strong class="card__title">EdgeBlackBox · 边缘黑匣子</strong>
+            <span class="card__authors"><strong>倪正航 Zhenghang NI</strong></span>
+            <p class="card__desc">基于 <strong>RK3568</strong> 的隐私保护型多模态边缘事件检索黑匣子。核心黑匣子循环：板载信号 / CAN FD 振动 → 环形缓冲 → 低成本事件触发 → JSONL 事件索引 → 本地检索回看，数据全程不出板。</p>
+            <span class="card__venue">Flagship Project · Edge AI</span><span class="pill pill--blue">进行中</span>
+            <span class="card__links"><a href="https://github.com/Nizhenghang/EdgeSentinel-RK3568" rel="noopener">GitHub</a></span>
           </div>
         </div>
-        <div class="projects-grid">
-          <article class="project reveal flagship">
-            <div class="p-meta">
-              <span class="p-tag">★ 旗舰项目 · 边缘 AI</span>
-              <span class="p-status">进行中</span>
-            </div>
-            <h3>EdgeBlackBox · 边缘黑匣子</h3>
-            <p>基于 <b>RK3568</b> 的<b>隐私保护型多模态边缘事件检索黑匣子</b>。核心黑匣子循环：板载信号 / CAN FD 振动 → 环形缓冲 → 低成本事件触发 → JSONL 事件索引 → 本地检索回看，数据全程不出板。</p>
-            <div class="p-stack"><span>RK3568</span><span>C</span><span>嵌入式 Linux</span><span>边缘 AI</span><span>CAN FD</span></div>
-            <a href="https://github.com/Nizhenghang/EdgeSentinel-RK3568" class="p-link">查看仓库 →</a>
-          </article>
 
-          <article class="project reveal">
-            <div class="p-meta">
-              <span class="p-tag">嵌入式 AI</span>
-              <span class="p-status">Realtime</span>
-            </div>
-            <h3>疲劳驾驶检测</h3>
-            <p>基于瑞萨 RA8D1，部署轻量化 CNN 卷积神经网络，实现对驾驶员疲劳状态的实时检测。</p>
-            <div class="p-stack"><span>C</span><span>CNN</span><span>MCU</span></div>
-            <a href="https://github.com/Nizhenghang/QianSai_Fatigue" class="p-link">查看仓库 →</a>
-          </article>
-
-          <article class="project reveal">
-            <div class="p-meta">
-              <span class="p-tag">FPGA</span>
-              <span class="p-status">Prototype</span>
-            </div>
-            <h3>基于openFPGA的自定义FPGA</h3>
-            <p>物理 FPGA 承载软 FPGA Fabric，软 FPGA 再承载用户流水灯逻辑，形成两级映射的分层架构。</p>
-            <div class="p-stack"><span>FPGA</span><span>Verilog</span><span>openFPGA</span></div>
-            <a href="https://github.com/Nizhenghang/openfpga-anlogic-hx4s20-led" class="p-link">查看仓库 →</a>
-          </article>
-
-          <article class="project reveal">
-            <div class="p-meta">
-              <span class="p-tag">FPGA · 边缘推理</span>
-              <span class="p-status">Verified</span>
-            </div>
-            <h3>FPGA 手写数字识别加速器</h3>
-            <p>在安路 EG4S20 / HX4S20 上实现 <b>INT4 量化</b> MLP 推理核心（48×48 → 32 → 10），MNIST 实测约 94.87%；RTL 与黄金模型一致，板级 200/200 帧验证通过。</p>
-            <div class="p-stack"><span>FPGA</span><span>Verilog</span><span>INT4</span><span>MNIST</span></div>
-            <a href="https://github.com/Nizhenghang/FPGA-Digit-Recognition" class="p-link">查看仓库 →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="interests">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-num">04 /</span>
-          <div>
-            <h2 class="section-title">正在探索</h2>
-            <p class="section-sub">未来无限，无畏向前</p>
+        <div class="card">
+          <div class="card__media">
+            <img src="images/projects/fatigue.jpg" alt="疲劳驾驶检测：摄像头与轻量化 CNN 实时监测示意" loading="lazy" width="900" height="546">
+          </div>
+          <div class="card__body">
+            <strong class="card__title">疲劳驾驶检测</strong>
+            <span class="card__authors"><strong>倪正航 Zhenghang NI</strong></span>
+            <p class="card__desc">基于瑞萨 <strong>RA8D1</strong>，部署轻量化 CNN 卷积神经网络，实现对驾驶员疲劳状态的实时检测。</p>
+            <span class="card__venue">Embedded AI · Realtime</span>
+            <span class="card__links"><a href="https://github.com/Nizhenghang/QianSai_Fatigue" rel="noopener">GitHub</a></span>
           </div>
         </div>
-        <div class="interests-grid">
-          <article class="interest reveal">
-            <div class="i-icon">🤖</div>
-            <h4>人工智能</h4>
-            <p>从大模型到智能体，关注 AI 如何真正落地到具体场景、解决真实问题。</p>
-          </article>
-          <article class="interest reveal">
-            <div class="i-icon">📚</div>
-            <h4>嵌入式 Linux</h4>
-            <p>在 RK3568 上做交叉编译、驱动移植与多任务并发；复杂网络、丰富外设与本地服务。</p>
-          </article>
-          <article class="interest reveal">
-            <div class="i-icon">⚙️</div>
-            <h4>工程实践</h4>
-            <p>从一行代码到完整项目，享受把想法变成可用工具的全过程。</p>
-          </article>
-          <article class="interest reveal">
-            <div class="i-icon">🧭</div>
-            <h4>产品思维</h4>
-            <p>不止“做出来”，更想理解“为什么做”和“为谁做”。</p>
-          </article>
-          <article class="interest reveal">
-            <div class="i-icon">🌍</div>
-            <h4>开放世界</h4>
-            <p>开源、知识共享、远程协作。相信开放让创造更自由。</p>
-          </article>
-          <article class="interest reveal">
-            <div class="i-icon">🛰️</div>
-            <h4>边缘智能</h4>
-            <p>隐私优先的多模态感知与本地检索，让模型与数据留在设备端，而非云上。</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="reveal">
-          <h2>一起<span class="accent">创造</span>点什么</h2>
-          <p>无论是项目合作、想法交流，还是单纯打个招呼，都欢迎联系我。</p>
-          <div class="contact-links">
-            <a href="mailto:24009180032@stu.xidian.edu.cn" class="contact-card">
-              <span class="c-label">Email</span>
-              <span class="c-val">24009180032@stu.xidian.edu.cn</span>
-            </a>
-            <a href="https://github.com/Nizhenghang" target="_blank" rel="noopener" class="contact-card">
-              <span class="c-label">GitHub</span>
-              <span class="c-val">@Nizhenghang</span>
-            </a>
+        <div class="card">
+          <div class="card__media">
+            <img src="images/projects/openfpga.jpg" alt="openFPGA：物理 FPGA 承载软 FPGA Fabric 的两级映射示意" loading="lazy" width="900" height="546">
+          </div>
+          <div class="card__body">
+            <strong class="card__title">基于 openFPGA 的自定义 FPGA</strong>
+            <span class="card__authors"><strong>倪正航 Zhenghang NI</strong></span>
+            <p class="card__desc">物理 FPGA 承载软 FPGA Fabric，软 FPGA 再承载用户流水灯逻辑，形成两级映射的分层架构。</p>
+            <span class="card__venue">FPGA · Prototype</span>
+            <span class="card__links"><a href="https://github.com/Nizhenghang/openfpga-anlogic-hx4s20-led" rel="noopener">GitHub</a></span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <footer>
-      <div class="container footer-inner">
-        <div>© 2026 倪正航 · 用代码与好奇心丈量世界</div>
-        <div><a href="#top">回到顶部 ↑</a></div>
-      </div>
-    </footer>
+        <div class="card">
+          <div class="card__media">
+            <img src="images/projects/mnist.jpg" alt="FPGA 手写数字识别加速器：INT4 量化 MLP 推理示意" loading="lazy" width="900" height="546">
+          </div>
+          <div class="card__body">
+            <strong class="card__title">FPGA 手写数字识别加速器</strong>
+            <span class="card__authors"><strong>倪正航 Zhenghang NI</strong></span>
+            <p class="card__desc">在安路 <strong>EG4S20 / HX4S20</strong> 上实现 INT4 量化 MLP 推理核心（48×48 → 32 → 10），MNIST 实测约 <strong>94.87%</strong>；RTL 与黄金模型一致，板级 200/200 帧验证通过。</p>
+            <span class="card__venue">FPGA · Edge Inference</span><span class="pill pill--rose">板级验证</span>
+            <span class="card__links"><a href="https://github.com/Nizhenghang/FPGA-Digit-Recognition" rel="noopener">GitHub</a></span>
+          </div>
+        </div>
+      </section>
 
-    <script src="./cosmos.js"></script>
-    <script src="./script.js"></script>
-  </body>
+      <section id="blog">
+        <h2>Blog</h2>
+        <p class="empty">To be updated.</p>
+      </section>
+
+      <section id="talks">
+        <h2>Talks</h2>
+        <p class="empty">To be updated.</p>
+      </section>
+
+      <section id="reports">
+        <h2>Reports</h2>
+        <p class="empty">To be updated.</p>
+      </section>
+
+      <section id="awards">
+        <h2>Awards</h2>
+        <p class="empty">To be updated.</p>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+        <p class="empty">To be updated.</p>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__follow">
+        <span>Follow:</span>
+        <a href="https://github.com/Nizhenghang" rel="noopener">GitHub</a>
+        <a href="mailto:24009180032@stu.xidian.edu.cn">Email</a>
+      </div>
+      <div>© 2026 Zhenghang NI 倪正航 · Style after <a href="https://github.com/academicpages/academicpages.github.io" rel="noopener">AcademicPages</a> &amp; <a href="https://wd7ang.github.io/" rel="noopener">WowPage</a>.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
