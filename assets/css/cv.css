@@ -102,6 +102,8 @@
 .cv-entry__head a:hover { color: var(--c-link); }
 .cv-entry__date { color: var(--c-muted); font-size: 0.85rem; font-weight: 400; white-space: nowrap; }
 .cv-entry__sub { margin: 2px 0; font-size: 0.92rem; }
+.cv-stack { margin: 2px 0; font-size: 0.92rem; color: var(--c-text); }
+.cv-stack strong { color: var(--c-title); margin-right: 6px; }
 .cv-bullets { margin: 6px 0 0; padding-left: 18px; font-size: 0.92rem; line-height: 1.6; }
 .cv-bullets li { margin-bottom: 3px; }
 .cv-repo { font-size: 0.85rem; }
