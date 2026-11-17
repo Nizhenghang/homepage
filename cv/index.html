@@ -95,20 +95,6 @@
       <h2>Projects · 项目经历</h2>
       <div class="cv-entry">
         <div class="cv-entry__head">
-          <span>EdgeBlackBox · 边缘黑匣子</span>
-          <span class="cv-entry__date">进行中</span>
-        </div>
-        <p class="cv-entry__sub">基于 RK3568 的隐私保护型多模态边缘事件记录黑匣子（旗舰项目）· 统一事件抽象 · 双脑判定 · 密封证据链</p>
-        <ul class="cv-bullets">
-          <li>提出统一事件抽象，将 IMU / 环境 / 音频 / CAN FD / 视频五模态归一为 24 维特征与 5 类事件本体，以结构性约束杜绝"传感器堆叠"式架构；C 与 Python 特征提取逐位一致（-ffp-contract=off 定点契约）。</li>
-          <li>设计"规则 + TinyMLP"双脑并行判定：9 条可解释 always-on 规则与 24-128-64-32-5 轻量网络写入同一事件库，兼顾零延迟硬触发与跨模态软判定。</li>
-          <li>实现防篡改密封证据链：ChaCha20-Poly1305 加密 + HKDF 密钥派生 + FNV-1a 哈希链，JSONL / TSV / SQLite 三写存储与授权 Web 检索，原始数据全程不出板。</li>
-          <li>在 RK3568 NPU 上集成 YOLOv5（RKNN），将入侵事件由"有运动"升级为"检测到人 / 车"，并复用边界框作隐私脱敏掩膜；统一管线、密封与检索已在板端闭环验证。</li>
-        </ul>
-        <p class="cv-repo"><a href="https://github.com/Nizhenghang/EdgeSentinel-RK3568" rel="noopener">github.com/Nizhenghang/EdgeSentinel-RK3568</a></p>
-      </div>
-      <div class="cv-entry">
-        <div class="cv-entry__head">
           <span>疲劳驾驶检测</span>
           <span class="cv-entry__date">嵌入式 AI · 实时</span>
         </div>
